@@ -46,7 +46,7 @@ Use the copy function below to do the following:
 */
 
  
-
+const arrayCopy = ar => [...ar];
 
 
 
