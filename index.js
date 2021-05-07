@@ -121,9 +121,12 @@ Use the removeFlavorByName function below to do the following:
     HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(){};
-
-
+// const removeFlavorByName = (ar, flavor) => ar.slice(0,ar.indexOf(flavor)).concat(ar.slice(ar.indexOf(flavor) + 1));
+// more efficient
+function removeFlavorByName(ar,flavor) {
+    let idx = ar.indexOf(flavor);
+    return ar.slice(0,idx).concat(ar.slice(idx + 1));
+}
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 July 7th is "World Chocolate Day" and Baskin Robins wants to create promotional materials highlighting all of their chocolate flavors. 
@@ -144,8 +147,9 @@ Use the filterByWord function below to do the following:
 
     DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem. 
 */
-function filterByWord(){};
-
+function filterByWord(ar,str){
+    return ar.filter(word => word.includes(str))
+}
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
 
