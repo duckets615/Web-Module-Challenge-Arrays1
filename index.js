@@ -147,9 +147,8 @@ Use the filterByWord function below to do the following:
 
     DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem. 
 */
-function filterByWord(ar,str){
-    return ar.filter(word => word.includes(str))
-}
+const filterByWord = (ar,str) => ar.filter(word => word.includes(str))
+
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
 
@@ -162,7 +161,7 @@ Use the getAverageWordLength function below to do the following:
 
     For example: getAverageWordLength(originalFlavors) should return a number between 0 and 3.     
 */
-function getAverageWordLength(){};
+const getAverageWordLength = ar => ar.map(word => word.split(' ').length).reduce((acc, cur) => acc + cur) / ar.length
 
 
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪💪💪💪
@@ -176,7 +175,12 @@ Use the getRandomFlavors function and new arrays below to do the following:
 
     For example: getRandomFlavors(originalFlavors, newFlavors, seasonalFlavors, regionalFlavors) might return ["Strawberry Cheesecake", "Eggnog,"..."Chocolate"].
 */
-function getRandomFlavors(){};
+function getRandomFlavors(one,two,three,four){
+    let max = [one.length, two.length, three.length, four.length].max()
+    let i = Math.round(Math.random() * 3);
+    let j = Math.round(Math.random() * max);
+    console.log(i,j);
+}
 
 // NEW DATA ARRAYS FOR STRETCH 2 ⬇️
 const newFlavors = [
