@@ -88,7 +88,7 @@ Use the removeLastFlavor function below to do the following:
 
     For example: running removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]
 */
-function removeLastFlavor(){}
+const removeLastFlavor = ar => ar.slice(0,-1)
 
 
 
